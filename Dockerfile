@@ -1,7 +1,8 @@
-# Simple Dockerfile for ERPNext on Render
-FROM frappe/erpnext-worker:version-15
+# Dockerfile minimal pour Render - utilise l'image officielle ERPNext
+FROM frappe/erpnext-worker:latest
 
-# Expose default port
+# Expose le port Bench (8000)
 EXPOSE 8000
 
+# Commande de démarrage
 CMD ["bench", "start"]
